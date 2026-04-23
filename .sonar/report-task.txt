@@ -1,0 +1,6 @@
+projectKey=flask-secure-login
+serverUrl=http://localhost:9000
+serverVersion=26.4.0.121862
+dashboardUrl=http://localhost:9000/dashboard?id=flask-secure-login
+ceTaskId=951bac01-e2d4-45c5-8f08-823255709ccd
+ceTaskUrl=http://localhost:9000/api/ce/task?id=951bac01-e2d4-45c5-8f08-823255709ccd

@@ -1,0 +1,31 @@
+# Entorno virtual y Python cache
+venv/
+__pycache__/
+*.pyc
+
+# Seguridad y secretos
+.env
+*.db
+*.sqlite3
+
+# Herramientas de análisis
+.sonar/
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# Git
+.git/
+.gitignore
+
+# Docker files (no se necesitan dentro del contenedor)
+docker-compose.yml
+Dockerfile
+.dockerignore
+
+# Documentación
+*.md
+*.docx
+reports/

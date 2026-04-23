@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard — Equipo SECURITY</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f2f4f7;
+      }
+      .navbar {
+        border-radius: 8px;
+        background: #f7abbd;
+        color: #fff;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .navbar a {
+        color: #fff;
+        text-decoration: none;
+      }
+      .container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      .card {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      .badge {
+        display: inline-block;
+        padding: 0.2rem 0.6rem;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        background: #d0e4f7;
+        color: #1b2a4a;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <strong>Equipo SECURITY</strong>
+      <a href="/logout">Cerrar sesión</a>
+    </nav>
+    <div class="container">
+      <div class="card">
+        <h2>¡Bienvenido, {{ user.username }}!</h2>
+        <p style="margin-top: 0.5rem; color: #5d6d7e">
+          Rol: <span class="badge">{{ user.role }}</span>
+        </p>
+        <hr style="margin: 1.5rem 0; border-color: #eee" />
+        <p>
+          Has iniciado sesión de forma segura. Tu sesión expirará en 30 minutos
+          de inactividad.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

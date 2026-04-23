@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    expose:
+      - "5000"
+    networks:
+      - internal
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
+    depends_on:
+      - web
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge
+
+# docker-compose up --build -d
